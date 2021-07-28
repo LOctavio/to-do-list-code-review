@@ -35,11 +35,7 @@ const printTask = (description, index) => {
   check.addEventListener('change', (e) => checkStatus(e, description, index));
   const text = document.createElement('textarea');
   text.addEventListener('change', (e) => {
-    if (e.target.value.length === 0) {
-      deleteTask(e.target.parentNode);
-    } else {
-      edit(e, task);
-    }
+    e.target.value.length === 0 ? deleteTask(e.target.parentNode) : edit(e, task);
   });
   const icon = new Image();
   icon.src = Icon;
@@ -120,10 +116,6 @@ const getLocalStorage = () => {
 
 window.onload = () => {
   printList();
-  if (localStorage.length === 0) {
-    addExamples();
-  } else {
-    getLocalStorage();
-  }
+  localStorage.length === 0 ? addExamples() : getLocalStorage();
   count = tasksList.length;
 };
