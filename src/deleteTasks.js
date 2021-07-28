@@ -2,7 +2,6 @@
 import { tasksList, printList } from './index.js';
 
 export function deleteTask(item) {
-  console.log(item);
   localStorage.clear();
   const tasksList2 = [];
   for (let i = 0; i < tasksList.length; i += 1) {
@@ -29,7 +28,6 @@ export function clearCompleted() {
     }
   }
   completedItems.forEach((element) => {
-    console.log(count);
     deleteTask(document.getElementById(element - count));
     count += 1;
   });
