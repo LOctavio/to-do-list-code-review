@@ -7,7 +7,7 @@ ul {
   position: relative;
 }
 
-li {
+ul li {
   border-top: 1px solid #ebebeb;
   height: 50px;
   width: inherit;
