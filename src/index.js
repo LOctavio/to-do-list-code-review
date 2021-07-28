@@ -32,8 +32,8 @@ const printTask = (description, index) => {
   task.addEventListener('drop', (e) => drop(container, e));
   task.addEventListener('dragover', (e) => allowDrop(e));
   const check = document.createElement('input');
-  check.addEventListener('change', (e) => checkStatus(e, description, index, text));
   const text = document.createElement('textarea');
+  check.addEventListener('change', (e) => checkStatus(e, description, index, text));
   text.addEventListener('change', (e) => {
     if (e.target.value.length === 0) {
       deleteTask(e.target.parentNode);
