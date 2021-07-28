@@ -32,7 +32,7 @@ const printTask = (description, index) => {
   task.addEventListener('drop', (e) => drop(container, e));
   task.addEventListener('dragover', (e) => allowDrop(e));
   const check = document.createElement('input');
-  check.addEventListener('change', (e) => checkStatus(e, description, index));
+  check.addEventListener('change', (e) => checkStatus(e, description, index, text));
   const text = document.createElement('textarea');
   text.addEventListener('change', (e) => {
     if (e.target.value.length === 0) {
