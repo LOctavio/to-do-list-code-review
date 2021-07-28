@@ -19,6 +19,10 @@ To run the project localy do the folllowing
 - run 'npm run build'
 - then run 'npm start'
 
+# Live demo
+
+[Live Demo Link](https://loctavio.github.io/to-do-list-code-review/)
+
 ## Authors
 
 👤 **Luis Octavio Ramirez Cruz**
