@@ -35,7 +35,11 @@ const printTask = (description, index) => {
   check.addEventListener('change', (e) => checkStatus(e, description, index));
   const text = document.createElement('textarea');
   text.addEventListener('change', (e) => {
-    e.target.value.length === 0 ? deleteTask(e.target.parentNode) : edit(e, task);
+    if (e.target.value.length === 0) {
+      deleteTask(e.target.parentNode);
+    } else {
+      edit(e, task);
+    }
   });
   const icon = new Image();
   icon.src = Icon;
