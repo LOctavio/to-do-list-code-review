@@ -93,15 +93,6 @@ export const printList = () => {
   container.appendChild(clearComplete);
 };
 
-const addExamples = () => {
-  addTask('Buy eggs', 1);
-  printTask('Buy eggs', 1);
-  addTask('Wash the dishes', 2);
-  printTask('Wash the dishes', 2);
-  addTask('Feed cats', 3);
-  printTask('Feed cats', 3);
-};
-
 const getLocalStorage = () => {
   for (let i = 0; i < localStorage.length; i += 1) {
     const index = localStorage.key(i);
@@ -116,6 +107,6 @@ const getLocalStorage = () => {
 
 window.onload = () => {
   printList();
-  localStorage.length === 0 ? addExamples() : getLocalStorage();
+  getLocalStorage();
   count = tasksList.length;
 };
